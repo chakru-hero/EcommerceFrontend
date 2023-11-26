@@ -1,0 +1,59 @@
+<div class="main-div">
+  <mat-card class="back">
+    <mat-card-content>
+      <div>
+        <div class="username-container">
+          <mat-form-field class="input-size">
+            <mat-label>Enter your username</mat-label>
+            <input
+              matInput
+              placeholder="username"
+              required
+              minlength="5"
+              [(ngModel)]="username"
+            />
+          </mat-form-field>
+        </div>
+        <div class="password-container">
+          <mat-form-field class="input-size">
+            <mat-label>Enter your password</mat-label>
+            <input
+              matInput
+              [type]="hide ? 'password' : 'text'"
+              [(ngModel)]="password"
+              required
+              minlength="5"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+        <div class="login-button-div">
+          <button
+            (click)="login()"
+            class="button-item"
+            mat-raised-button
+            color="accent"
+          >
+            Login
+          </button>
+        </div>
+        <div class="divider">
+          <hr class="hr-text" data-content="" />
+        </div>
+        <div class="register-button-div">
+          <button class="button-item" mat-raised-button routerLink="/signup">
+            Create an account
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

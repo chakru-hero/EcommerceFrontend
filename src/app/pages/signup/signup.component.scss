@@ -1,0 +1,109 @@
+.email-container
+  {margin-left: 8px;
+  display: flex;
+  align-items:center;
+  justify-content: center;}
+
+.username-container
+  {margin-left: 8px;
+  display: flex;
+  align-items:center;
+  justify-content: center;}
+  
+
+.password-container
+ { margin-left: 8px;
+  display: flex;
+  align-items:center;
+  justify-content: center;}
+
+.signup-button
+  {display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.input-size
+  {height:100%;
+  width: 300px;
+  padding:10px;
+}
+.main-div
+ { display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  }
+.back
+  {vertical-align: middle;
+  width:100vw;
+  background-color: white;
+  margin:7% 25%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.signup-button-div
+  {display: flex;
+  align-items:center;
+  justify-content: center;
+  padding: 10px;}
+
+.signup-button
+  {width:150px;}
+
+.login-url-container
+ { display: flex;
+  align-items:center;
+  justify-content: center;
+  padding : 10px;}
+
+
+
+
+
+  
+
+
+.password-right-align 
+ { text-align: right;
+}
+
+input.password-right-align::-webkit-outer-spin-button,
+input.password-right-align::-webkit-inner-spin-button 
+  {display: none;}
+
+
+input.password-right-align 
+ { -moz-appearance: textfield;}
+
+.hr-text 
+  {line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: .5;
+  &:before
+    {content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after 
+    {content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+
+}
