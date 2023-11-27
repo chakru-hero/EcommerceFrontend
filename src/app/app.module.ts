@@ -27,6 +27,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ProductsHeaderComponent } from './pages/home/components/products-header/products-header.component';
 import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
 import { FiltersComponent } from './pages/home/components/filters/filters.component';
+import { HeaderComponent } from './u_components/header/header.component';
+import { CartService } from './services/cart/cart.service';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 @NgModule({
@@ -37,7 +40,9 @@ import { FiltersComponent } from './pages/home/components/filters/filters.compon
     HomeComponent,
     ProductsHeaderComponent,
     ProductBoxComponent,
-    FiltersComponent
+    FiltersComponent,
+    HeaderComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +67,7 @@ import { FiltersComponent } from './pages/home/components/filters/filters.compon
     MatBadgeModule,
     MatSnackBarModule
   ],
-  providers: [CookieService],
+  providers: [CookieService,CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

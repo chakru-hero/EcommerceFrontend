@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
@@ -8,8 +9,17 @@ import { UserService } from 'src/app/services/user/user.service';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
 })
-export class SignupComponent {
-  constructor(private signupService: UserService, private router: Router) {}
+export class SignupComponent implements OnInit,OnDestroy{
+  constructor(private signupService: UserService,
+     private router: Router,
+     private appcomponent : AppComponent
+     ) {}
+     ngOnDestroy(): void {
+      this.appcomponent.setVisibility(true);
+    }
+    ngOnInit(): void {
+      this.appcomponent.setVisibility(false);
+    }
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
   username: string = '';

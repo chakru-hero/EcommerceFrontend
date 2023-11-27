@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Cart } from 'src/app/models/cart.model';
 import { Product } from 'src/app/models/prodct.model';
+import { CartService } from 'src/app/services/cart/cart.service';
 import { StoreService } from 'src/app/services/store/store.service';
 
 
@@ -12,9 +14,9 @@ const ROWS_HEIGHT: {[id:number]:number} = {1:400 , 3:355, 4: 350};
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent{
   constructor(
-    // private cartservice : CartService,
+    private cartservice : CartService,
     private storeService : StoreService
     ) { }
     cols=3;
@@ -45,14 +47,14 @@ export class HomeComponent {
       this.getProducts();
   }
   onAddToCart(product: Product):void{
-    // this.cartservice.addToCart({
-    //   product : product.imageUrl,
-    //   name : product.name,
-    //   price : product.price,
-    //   description : product.description,
-    //   quantity : 1,
-    //   id : product.code,
-    // });
+    this.cartservice.addToCart({
+      product : product.imageUrl,
+      name : product.name,
+      price : product.price,
+      description : product.description,
+      quantity : 1,
+      id : product.code,
+    });
   }
 
   onItemsCountChange(newCount : number):void{
