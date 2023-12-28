@@ -1,27 +1,37 @@
-# EcommerceFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+# E-commerce Frontend (Angular)
 
-## Development server
+Welcome to the E-commerce Frontend, the client-side component of an e-commerce platform built using Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Overview
+The E-commerce Frontend, built with Angular, provides a user-friendly interface for customers to interact with your e-commerce platform. It communicates with the backend to display product listings, handle user authentication, and manage orders.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
+- **User Authentication**: Seamless user authentication and authorization using JWT.
+- **Product Listings**: Display and search for available products with detailed information.
+- **Shopping Cart**: Users can add products to their shopping cart and proceed to checkout.
+## Getting Started
+To run the E-commerce Frontend locally, follow these steps:
 
-## Build
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chakru-hero/EcommerceFrontend.git
+2. Change directory:
+cd EcommerceFrontend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Install dependencies:
+npm install
 
-## Running unit tests
+4. Start the application:
+ng serve
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. Open your browser and navigate to http://localhost:4200/.
 
-## Running end-to-end tests
+## Project Structure
+The project follows a typical Angular structure:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies
+Angular: A platform and framework for building client-side applications.
+TailwindCSS: A CSS library.
+Angular Material: A UI component library for Angular applications.
